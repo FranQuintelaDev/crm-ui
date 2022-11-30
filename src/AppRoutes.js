@@ -1,6 +1,7 @@
 import { Counter } from "./pages/Counter";
 import { FetchData } from "./pages/FetchData";
 import { Home } from "./pages/Home";
+import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 
 const AppRoutes = [
@@ -19,6 +20,10 @@ const AppRoutes = [
   {
     path: '/sign-up',
     element: <SignUp />
+  },
+  {
+    path: '/log-in',
+    element: <LogIn />
   },
 ];
 
