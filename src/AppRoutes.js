@@ -2,6 +2,7 @@ import { Counter } from "./pages/Counter";
 import { FetchData } from "./pages/FetchData";
 import { Home } from "./pages/Home";
 import LogIn from "./pages/LogIn";
+import Opportunities from "./pages/Opportunities";
 import SignUp from "./pages/SignUp";
 
 const AppRoutes = [
@@ -24,6 +25,10 @@ const AppRoutes = [
   {
     path: '/log-in',
     element: <LogIn />
+  },
+  {
+    path: '/opportunities',
+    element: <Opportunities />
   },
 ];
 
