@@ -11,7 +11,7 @@ export default function SignUp() {
 
   return (
     <>
-    <h1 className="title">Welcome Page</h1>
+    <h1 className="title">SignUp Page</h1>
     {user ? <> <p id="signUpSuccessMsg" className="">User {user.username} created</p> </>: <></>}
     <SignUpForm updateUser={updateUser}></SignUpForm>
     </>
