@@ -35,7 +35,7 @@ export default function OpportunitiesDetail() {
           <h1 id="opportunityName" className="title">{opportunity.name}</h1>
           {contacts ?
             <>
-              <h2>Contacts</h2>
+              <h3>Contacts</h3>
               {contacts.map(contact =>
                 <div key={contact.id} id="contact">
 
