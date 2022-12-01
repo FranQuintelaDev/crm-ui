@@ -47,8 +47,8 @@ export default function SignUpForm({updateUser}) {
   };
 
   return (
-    <div className="">
-      <form onSubmit={handleSubmit}>
+    <div className="pd-x pd-y">
+      <form className="rows" onSubmit={handleSubmit}>
         <div>
           <h3>Sign up</h3>
         </div>

@@ -10,10 +10,16 @@ export default function SignUp() {
   const [user, updateUser] = useState();
 
   return (
-    <>
-    <h1 className="title">SignUp Page</h1>
-    {user ? <> <p id="signUpSuccessMsg" className="">User {user.username} created</p> </>: <></>}
-    <SignUpForm updateUser={updateUser}></SignUpForm>
-    </>
+    <div className='centeredPage rows al-i-center'>
+      <h1 className="title">SignUp Page</h1>
+
+      <div className="card rows"  >
+        <img src="https://via.placeholder.com/150 " alt="Avatar" style={{ width: 'width:100%' }} />
+
+        {user ? <> <p id="signUpSuccessMsg" className="">User {user.username} created</p> </> : <></>}
+        <SignUpForm updateUser={updateUser}></SignUpForm>
+      </div>
+
+    </div>
   );
 }

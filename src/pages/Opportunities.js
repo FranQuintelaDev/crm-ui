@@ -5,7 +5,6 @@ export default function Opportunities() {
 
   return (
     <>
-      <h1 className="title">Opportunities Page</h1>
       <Outlet />
     </>
   );
