@@ -25,11 +25,7 @@ const AppRoutes = [
   {
     path: '/log-in',
     element: <LogIn />
-  },
-  {
-    path: '/opportunities',
-    element: <Opportunities />
-  },
+  }
 ];
 
 export default AppRoutes;

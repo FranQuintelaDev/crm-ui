@@ -3,6 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
 import { Layout } from './components/Layout';
 import './custom.css';
+import Opportunities from './pages/Opportunities';
+import OpportunitiesDetail from './pages/OpportunitiesDetail';
+import OpportunitiesList from './pages/OpportunitiesList';
 
 export default class App extends Component {
   static displayName = App.name;
@@ -15,6 +18,13 @@ export default class App extends Component {
             const { element, ...rest } = route;
             return <Route key={index} {...rest} element={element} />;
           })}
+          <Route path="/opportunities" element={<Opportunities />}>
+            <Route
+              path="/opportunities/:opportunityId"
+              element={<OpportunitiesDetail />}
+            />
+            <Route path="" element={<OpportunitiesList />} />
+          </Route>
         </Routes>
       </Layout>
     );
