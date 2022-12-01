@@ -100,7 +100,7 @@ export default function OpportunitiesDetail() {
 
   return (
     <>
-
+      <h1 className="title">Opportunity Detail</h1>
       {opportunity ?
         <>
           <h1 id="opportunityName" className="title">{opportunity.name}</h1>

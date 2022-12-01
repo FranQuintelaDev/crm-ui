@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-export default function OpportunitiesList() {
+export default function OpportunitiesClientsList() {
 
   const [opportunities, setOpportunities] = useState();
 
   useEffect(() => {
 
-    fetch("http://localhost:8080/api/v1/opportunities")
+    fetch("http://localhost:8080/api/v1/opportunities/clients")
       .then(res => res.json())
       .then(
         (data) => {
@@ -19,7 +19,7 @@ export default function OpportunitiesList() {
 
   return (
     <>
-      <h1 className="title">Opportunities List</h1>
+      <h1 className="title">Opportunities Clients List</h1>
       {opportunities ?
         <>
           {opportunities.map(opportunity =>
