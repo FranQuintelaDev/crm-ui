@@ -76,5 +76,19 @@ a {
 }
 button{
   border-radius: 10px 10px 10px 10px;
-    background-color: #f9f7b2;
 }
+
+#isClientText{
+  font-weight: bold;
+  color:lightgreen
+}
+#isOpportunityText{
+  font-weight: bold;
+  color:lightblue
+}
+/* .bg-client{
+  background-color:lightgreen
+}
+.bg-opp{
+  background-color: lightblue;
+} */

@@ -143,7 +143,7 @@ export default function OpportunitiesDetail() {
             <img src="https://via.placeholder.com/150 " alt="Avatar" style={{ width: 'width:100%' }} />
             <div className="container">
               <h4 id="opportunityName"><b>{opportunity.name}</b></h4>
-              {opportunity.client ? <><p id="isClientText">Is Client</p> <button id="markAsOpportunityButton" onClick={markAsOpportunityHandler}>Mark as Opportunity</button></> : <> <p id="isOpportunityText">Is Opportunity</p> <button id="markAsClientButton" onClick={() => setShowModalClient(true)}>Mark as Client</button></>}
+              {opportunity.client ? <><p id="isClientText">Client</p> <button id="markAsOpportunityButton" className='bg-opp' onClick={markAsOpportunityHandler}>Mark as Opportunity</button></> : <> <p id="isOpportunityText">Opportunity</p> <button id="markAsClientButton" className='bg-client' onClick={() => setShowModalClient(true)}>Mark as Client</button></>}
             </div>
           </div>
 

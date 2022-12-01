@@ -28,13 +28,13 @@ export class NavMenu extends Component {
          </Link>
         
         <div className='cols'>
-        <Link to={"/opportunities"} id="homeLink">
-          <button>
+        <Link to={"/opportunities"}  id="opportunitiesLink">
+          <button className="bg-opp">
             Opportunities
           </button>
           </Link>
-          <Link to={"/opportunities/clients"} id="homeLink">
-          <button>
+          <Link to={"/opportunities/clients"}  id="clientsLink">
+          <button className="bg-client">
             Clients
           </button>
           </Link>
