@@ -138,9 +138,15 @@ export default function OpportunitiesDetail() {
     <>
       <h1 className="title">Opportunity Detail</h1>
       {opportunity ?
-        <>
-          <h1 id="opportunityName" className="title">{opportunity.name}</h1>
-          {opportunity.client ? <><p id="isClientText">Is Client</p> <button id="markAsOpportunityButton" onClick={markAsOpportunityHandler}>Mark as Opportunity</button></> : <> <p id="isOpportunityText">Is Opportunity</p> <button id="markAsClientButton" onClick={() => setShowModalClient(true)}>Mark as Client</button></>}
+        <div id="opportunityDetail" className="rows">
+          <div className="card cols"  >
+            <img src="https://via.placeholder.com/150 " alt="Avatar" style={{ width: 'width:100%' }} />
+            <div className="container">
+              <h4 id="opportunityName"><b>{opportunity.name}</b></h4>
+              {opportunity.client ? <><p id="isClientText">Is Client</p> <button id="markAsOpportunityButton" onClick={markAsOpportunityHandler}>Mark as Opportunity</button></> : <> <p id="isOpportunityText">Is Opportunity</p> <button id="markAsClientButton" onClick={() => setShowModalClient(true)}>Mark as Client</button></>}
+            </div>
+          </div>
+
 
 
           <Modal title="From opportunity to client" id="isClientButton" onClose={() => setShowModalClient(false)} show={showModalClient}>
@@ -163,57 +169,72 @@ export default function OpportunitiesDetail() {
             </form>
           </Modal>
 
+          <div id="contacts" className="rows">
 
-          <h3>Contacts</h3>
+            <div className="cols">
+              <h3>Contacts</h3>
 
-          <button id="addContactButton" onClick={() => setShowModalContact(true)}>Add Contact</button>
-          <Modal title="Add Contact" id="addContactModal" onClose={() => setShowModalContact(false)} show={showModalContact}>
-            <form onSubmit={handleSubmitContact}>
+              <button id="addContactButton" onClick={() => setShowModalContact(true)}>Add Contact</button>
+            </div>
 
-              <div>
-                <input
-                  type="text"
-                  name="title"
-                  id="title"
-                  placeholder="Title"
-                  onChange={handleChangeContact}
-                />
-              </div>
-              <div>
-                <input
-                  type="text"
-                  name="type"
-                  id="type"
-                  placeholder="Type"
-                  onChange={handleChangeContact}
-                />
-              </div>
-              <div>
-                <input
-                  type="text"
-                  name="date"
-                  id="date"
-                  placeholder="Date as yyyy-MM-dd" 
-                  onChange={handleChangeContact}
-                />
-              </div>
-              <div>
-                <button type="submit" id="addContactSubmitButton">Submit</button>
-              </div>
+            <Modal title="Add Contact" id="addContactModal" onClose={() => setShowModalContact(false)} show={showModalContact}>
+              <form onSubmit={handleSubmitContact}>
 
-            </form>
-          </Modal>
-
-          {contacts ?
-            <>
-              {contacts.map(contact =>
-                <div key={contact.id} id="contact">
-
-                  <p className="">{contact.title}</p>
+                <div>
+                  <input
+                    type="text"
+                    name="title"
+                    id="title"
+                    placeholder="Title"
+                    onChange={handleChangeContact}
+                  />
                 </div>
-              )}
-            </> : <></>}
-        </> : <></>}
+                <div>
+                  <input
+                    type="text"
+                    name="type"
+                    id="type"
+                    placeholder="Type"
+                    onChange={handleChangeContact}
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    name="date"
+                    id="date"
+                    placeholder="Date as yyyy-MM-dd"
+                    onChange={handleChangeContact}
+                  />
+                </div>
+                <div>
+                  <button type="submit" id="addContactSubmitButton">Submit</button>
+                </div>
+
+              </form>
+            </Modal>
+            <div id="contactsList" className="rows">
+              {contacts ?
+                <>
+                  {contacts.map(contact =>
+                    <div className="card " key={contact.id} id="contact">
+
+                      <div className="container">
+                        <h4 ><b>{contact.title}</b></h4>
+                        <p>{contact.type}</p>
+                        <p >{contact.date}</p>
+
+                      </div>
+                    </div>
+
+
+                  )}
+                </> : <></>}
+            </div>
+          </div>
+
+
+        </div> : <></>}
 
     </>
   );

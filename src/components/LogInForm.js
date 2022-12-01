@@ -46,8 +46,8 @@ export default function LogInForm() {
   };
 
   return (
-    <div className="">
-      <form onSubmit={handleSubmit}>
+    <div className="pd-x pd-y">
+      <form className="rows" onSubmit={handleSubmit}>
         <div>
           <h3>Log in</h3>
         </div>

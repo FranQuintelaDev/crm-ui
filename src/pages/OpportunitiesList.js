@@ -19,15 +19,23 @@ export default function OpportunitiesList() {
 
   return (
     <>
-      <h1 className="title">Opportunities List</h1>
+      <h1 className="title">Opportunities</h1>
       {opportunities ?
         <>
-          {opportunities.map(opportunity =>
-            <div key={opportunity.id} id="opportunity">
-              <Link to={"/opportunities/" + opportunity.id}><h2 className="">{opportunity.name}</h2></Link>
+          <div id="opportunities" className="rows">
+            {opportunities.map(opportunity =>
+              <Link to={"/opportunities/" + opportunity.id} key={opportunity.id} id="opportunity">
+                <div className="card cols"  >
+                  <img src="https://via.placeholder.com/150 " alt="Avatar" style={{ width: 'width:100%' }} />
+                  <div className="container">
+                    <h4><b>{opportunity.name}</b></h4>
+                    <p>Click to see details</p>
+                  </div>
+                </div>
+              </Link>
+            )}
+          </div>
 
-            </div>
-          )}
         </> : <></>}
 
     </>

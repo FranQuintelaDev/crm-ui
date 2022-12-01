@@ -5,14 +5,19 @@ import LogInForm from '../components/LogInForm';
 
 export default function LogIn() {
 
-
-  // here we create an array state to store the contact form data
-  const [user, updateUser] = useState();
-
   return (
-    <>
+    
+    <div className='centeredPage rows al-i-center'>
     <h1 className="title">LogIn Page</h1>
-    <LogInForm></LogInForm>
-    </>
+
+    <div className="card rows"  >
+      <img src="https://via.placeholder.com/150 " alt="Avatar" style={{ width: 'width:100%' }} />
+
+      <LogInForm></LogInForm>
+    </div>
+
+  </div>
+
+    
   );
 }

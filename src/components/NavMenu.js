@@ -5,7 +5,7 @@ import './NavMenu.css';
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
 
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.toggleNavbar = this.toggleNavbar.bind(this);
@@ -14,7 +14,7 @@ export class NavMenu extends Component {
     };
   }
 
-  toggleNavbar () {
+  toggleNavbar() {
     this.setState({
       collapsed: !this.state.collapsed
     });
@@ -22,7 +22,24 @@ export class NavMenu extends Component {
 
   render() {
     return (
-      <header>
+      <header className='cols j-c-space-between pd-x'>
+         <Link to={"/"} id="homeLink">
+         <h2>CRM</h2>
+         </Link>
+        
+        <div className='cols'>
+        <Link to={"/opportunities"} id="homeLink">
+          <button>
+            Opportunities
+          </button>
+          </Link>
+          <Link to={"/opportunities/clients"} id="homeLink">
+          <button>
+            Clients
+          </button>
+          </Link>
+        </div>
+
         {/* <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" container light>
           <NavbarBrand tag={Link} to="/">Project1</NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
