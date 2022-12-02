@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function OpportunitiesList() {
 
   const [opportunities, setOpportunities] = useState();
-
+  
   useEffect(() => {
 
     fetch("http://localhost:8080/api/v1/opportunities")
@@ -20,7 +20,7 @@ export default function OpportunitiesList() {
   return (
     <>
       <h1 className="title">Opportunities</h1>
-      {opportunities ?
+      {opportunities ? 
         <>
           <div id="opportunities" className="rows">
             {opportunities.map(opportunity =>

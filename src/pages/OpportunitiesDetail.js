@@ -26,6 +26,7 @@ export default function OpportunitiesDetail() {
   };
 
   const handleChangeContact = (event) => {
+    console.log(event)
     setContactInfo({ ...contactInfo, [event.target.name]: event.target.value });
   };
   const navigate = useNavigate();
